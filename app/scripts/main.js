@@ -25,9 +25,13 @@ console.log(cities);
 function displayResult() {
   var match = findWord(searchText.value, cities);
   var text = match.map(function(place){
-    var output = '<li>';
-    output += '<span>' + place.city + '</span>';
-    output += '<span>population: ' + place.population + '</span>';
+    var regex = new RegExp(searchText.value, 'gi');
+    var city = place.city.replace(regex, '<span class="highlight">' + searchText.value + '</span>');
+    var state = place.state.replace(regex, '<span class="highlight">' + searchText.value + '</span>');
+
+    var output = '<li class="individual">';
+    output += '<span>' + city + ', ' + state + '</span>';
+    output += '<span>population: ' + place.population.toLocaleString() + '</span>';
     output += '</li>';
     return output;
   });
