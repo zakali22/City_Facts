@@ -71,7 +71,7 @@ form input {
 }
 
 .suggestion .individual span:nth-child(2) {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .suggestion li:nth-child(even) {

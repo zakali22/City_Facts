@@ -22,6 +22,10 @@ function findWord(wordToFind, cities){
 
 console.log(cities);
 
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 function displayResult() {
   var match = findWord(searchText.value, cities);
   var text = match.map(function(place){
@@ -31,7 +35,7 @@ function displayResult() {
 
     var output = '<li class="individual">';
     output += '<span>' + city + ', ' + state + '</span>';
-    output += '<span>population: ' + place.population.toLocaleString() + '</span>';
+    output += '<span>population: ' + numberWithCommas(place.population) + '</span>';
     output += '</li>';
     return output;
   });
