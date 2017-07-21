@@ -1,4 +1,5 @@
 # City_Facts
+# A vanillaJS based project for searching cities and states in America.
 # To see this project:
 
 ```
