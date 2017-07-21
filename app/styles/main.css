@@ -4,15 +4,6 @@ body {
   background-color: lightblue;
 }
 
-.header {
-  display: block;
-  width: 40%;
-  margin: 0 auto;
-  position: relative;
-  left: 50px;
-  text-align: center;
-}
-
 .container {
   display: block;
   width: 30%;
